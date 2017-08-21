@@ -6,7 +6,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:id="@+id/exercise"
         android:hint="Add exercise here"
         android:textSize="20sp"
@@ -14,11 +14,15 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:id="@+id/reps"
         android:hint="Enter number of reps below"
         android:textSize="20sp"
-        android:gravity="top" />
+        android:gravity="top"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
 
     <NumberPicker
         android:layout_width="match_parent"
@@ -30,11 +34,15 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:id="@+id/sets"
         android:hint="Enter number of sets below"
         android:textSize="20sp"
-        android:gravity="top" />
+        android:gravity="top"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
 
     <NumberPicker
         android:layout_width="match_parent"
@@ -47,6 +55,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="Save"/>
+        android:text="Save"
+        android:onClick="saveButtonClicked"/>
 
 </LinearLayout>

@@ -1,5 +1,6 @@
 package com.example.owner.tracker;
 
+import android.content.Intent;
 import android.support.constraint.solver.ArrayLinkedVariables;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,6 +25,13 @@ public class MainActivity extends AppCompatActivity {
         listView.setAdapter(arrayAdapter);
     }
     public void onClick(View v) {
+        Intent intent = new Intent();
+        intent.setClass(MainActivity.this, EditFieldClass.class);
+        startActivityForResult(intent, Intent_Constants.INTENT_REQUEST_CODE);
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }
